@@ -11,15 +11,29 @@ $serif-font: 'Source Serif Pro';
 @mixin transition($args...) {
   -webkit-transition: $args;
   -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
   transition: $args;
+}
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model;
+  -moz-box-sizing: $box-model;
+  box-sizing: $box-model;
+}
+
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
 }
 
 * {
   font-family: $sans-font;
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-image: linear-gradient(270deg, $gradient-blue 15%, $gradient-pink 100%);
 }
 
 h1,
@@ -31,10 +45,19 @@ h6 {
   font-family: $serif-font;
 }
 
+%center-vertical {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .content {
-  background-image: linear-gradient(270deg, $gradient-blue 15%, $gradient-pink 100%);
   height: 100vh;
   width: 100vw;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .header {
@@ -62,31 +85,41 @@ h6 {
   }
 
   li {
-    color: $secondary-color;
     display: inline-block;
     font-size: 18px;
     letter-spacing: 1.5px;
     list-style-type: none;
     margin: 31px 0 31px 30px;
   }
+
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+  }
 }
 
 .body-container {
+  height: calc(100% - 85px);
   margin: 0 auto;
   max-width: 1200px;
-  min-height: calc(100% - 85px);
   width: 80%;
 }
 
 .intro {
   font-size: 24px;
+  height: calc(100% - 80px);
+  position: relative;
   width: 100%;
+
+  .intro-text {
+    @extend %center-vertical;
+    width: 100%;
+  }
 
   h1 {
     color: $primary-color;
     font-size: 3em;
     letter-spacing: 1px;
-    padding-top: 35%;
     text-align: right;
   }
 
@@ -96,22 +129,25 @@ h6 {
     letter-spacing: .3px;
     text-align: right;
   }
+}
 
-  input {
-    @include transition(background .3s ease-out, color .3s ease-out);
-    background: transparent;
-    border: 2px solid $primary-color;
+.about {
+  background: $white;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-bottom: 45px;
+  padding: 35px 45px;
+  width: 100%;
+
+  h3 {
     color: $primary-color;
-    float: right;
-    font-size: .75em;
-    font-style: italic;
-    font-weight: 700;
-    margin-top: 20px;
-    padding: .5em 2em;
+    font-size: 1.8em;
+  }
 
-    &:hover {
-      background: $primary-color;
-      color: $white;
-    }
+  p {
+    color: $secondary-color;
+    font-size: 1em;
+    line-height: 1.8;
+    margin-top: 20px;
   }
 }
