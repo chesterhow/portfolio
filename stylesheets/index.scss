@@ -1,0 +1,117 @@
+// scss-lint:disable VendorPrefix
+$white: #fff;
+$primary-color: #111;
+$secondary-color: #555;
+$gradient-blue: #daf5ff;
+$gradient-pink: #fff5eb;
+
+$sans-font: 'Source Sans Pro';
+$serif-font: 'Source Serif Pro';
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+* {
+  font-family: $sans-font;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $serif-font;
+}
+
+.content {
+  background-image: linear-gradient(270deg, $gradient-blue 15%, $gradient-pink 100%);
+  height: 100vh;
+  width: 100vw;
+}
+
+.header {
+  background: $white;
+  height: 85px;
+}
+
+.header-container {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 80%;
+
+  h3 {
+    color: $primary-color;
+    display: inline-block;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 20px 0;
+  }
+
+  ul {
+    display: inline-block;
+    float: right;
+  }
+
+  li {
+    color: $secondary-color;
+    display: inline-block;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    list-style-type: none;
+    margin: 31px 0 31px 30px;
+  }
+}
+
+.body-container {
+  margin: 0 auto;
+  max-width: 1200px;
+  min-height: calc(100% - 85px);
+  width: 80%;
+}
+
+.intro {
+  font-size: 24px;
+  width: 100%;
+
+  h1 {
+    color: $primary-color;
+    font-size: 3em;
+    letter-spacing: 1px;
+    padding-top: 35%;
+    text-align: right;
+  }
+
+  p {
+    color: $secondary-color;
+    font-size: 1em;
+    letter-spacing: .3px;
+    text-align: right;
+  }
+
+  input {
+    @include transition(background .3s ease-out, color .3s ease-out);
+    background: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    float: right;
+    font-size: .75em;
+    font-style: italic;
+    font-weight: 700;
+    margin-top: 20px;
+    padding: .5em 2em;
+
+    &:hover {
+      background: $primary-color;
+      color: $white;
+    }
+  }
+}
