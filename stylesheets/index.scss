@@ -1,9 +1,13 @@
 // scss-lint:disable VendorPrefix
 $white: #fff;
 $primary-color: #111;
-$secondary-color: #555;
+$secondary-color: #717171;
 $gradient-blue: #daf5ff;
 $gradient-pink: #fff5eb;
+$project-blue: #66a7d5;
+$project-orange: #eaa187;
+$project-green: #7dcc93;
+$project-darkblue: #21364b;
 
 $sans-font: 'Source Sans Pro';
 $serif-font: 'Source Serif Pro';
@@ -20,6 +24,39 @@ $serif-font: 'Source Serif Pro';
   box-sizing: $box-model;
 }
 
+%center-vertical {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+%project {
+  color: $white;
+  font-size: 20px;
+  height: 80%;
+  padding: 80px 0;
+  text-align: center;
+  width: 100%;
+
+  h2 {
+    font-size: 2.4em;
+  }
+
+  h4 {
+    font-family: $sans-font;
+    font-weight: 300;
+  }
+
+  p {
+    font-weight: 300;
+    letter-spacing: .5px;
+    line-height: 1.6em;
+    margin: 0 auto;
+    max-width: 90%;
+    width: 600px;
+  }
+}
+
 *,
 *:after,
 *:before {
@@ -32,10 +69,6 @@ $serif-font: 'Source Serif Pro';
   padding: 0;
 }
 
-body {
-  background-image: linear-gradient(270deg, $gradient-blue 15%, $gradient-pink 100%);
-}
-
 h1,
 h2,
 h3,
@@ -45,24 +78,21 @@ h6 {
   font-family: $serif-font;
 }
 
-%center-vertical {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .content {
   height: 100vh;
   width: 100vw;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 .header {
   background: $white;
   height: 85px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 .header-container {
@@ -98,22 +128,27 @@ h6 {
   }
 }
 
+.spacer {
+  height: 85px;
+}
+
 .body-container {
-  height: calc(100% - 85px);
-  margin: 0 auto;
-  max-width: 1200px;
-  width: 80%;
+  height: 100%;
+  width: 100%;
 }
 
 .intro {
+  background-image: linear-gradient(270deg, $gradient-blue 15%, $gradient-pink 100%);
   font-size: 24px;
-  height: calc(100% - 80px);
+  height: calc(100% - 275px);
   position: relative;
   width: 100%;
 
   .intro-text {
     @extend %center-vertical;
-    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 80%;
   }
 
   h1 {
@@ -131,13 +166,18 @@ h6 {
   }
 }
 
-.about {
+.works {
   background: $white;
-  border-radius: 10px;
   font-size: 20px;
-  margin-bottom: 45px;
-  padding: 35px 45px;
+  height: 180px;
+  position: relative;
+  text-align: center;
   width: 100%;
+
+  .works-text {
+    @extend %center-vertical;
+    width: 100%;
+  }
 
   h3 {
     color: $primary-color;
@@ -147,7 +187,27 @@ h6 {
   p {
     color: $secondary-color;
     font-size: 1em;
-    line-height: 1.8;
-    margin-top: 20px;
+    line-height: 1.5em;
+    margin-top: 5px;
   }
+}
+
+.project-blue {
+  @extend %project;
+  background: $project-blue;
+}
+
+.project-orange {
+  @extend %project;
+  background: $project-orange;
+}
+
+.project-green {
+  @extend %project;
+  background: $project-green;
+}
+
+.project-darkblue {
+  @extend %project;
+  background: $project-darkblue;
 }

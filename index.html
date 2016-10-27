@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i|Source+Serif+Pro:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,600i|Source+Serif+Pro:700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="stylesheets/index.min.css">
     <title>Chester How</title>
   </head>
@@ -13,12 +13,13 @@
         <div class="header-container">
           <h3>ches.</h3>
           <ul>
-            <li><a data-scroll href="#about">ABOUT</a></li>
-            <li><a data-scroll href="#">WORKS</a></li>
+            <li><a data-scroll href="#works">WORKS</a></li>
+            <li><a data-scroll href="#">ABOUT</a></li>
             <li><a data-scroll href="#">CONTACT</a></li>
           </ul>
         </div>
       </div>
+      <div class="spacer"></div>
       <div class="body-container">
         <div class="intro">
           <div class="intro-text">
@@ -26,17 +27,48 @@
             <p>Developer &#38; designer, fueled by coffee.</p>
           </div>
         </div>
-        <div id="about" class="about">
-          <h3>About.</h3>
+        <div id="works" class="works">
+          <div class="works-text">
+            <h3>Works.</h3>
+            <p>Here’s a showcase of what I’ve been up to.</p>
+          </div>
+        </div>
+        <div class="project-blue">
+          <h2>IASA</h2>
+          <h4>UI Design / Web Development</h4>
           <p>
-            Hello! I’m Chester, a web developer and designer based in Singapore. I work best with a cup of coffee and some good music. Keep scrolling to check out some projects I've worked on!
+            Investigative Analysis &#38; Structured Argumentation (IASA) is a web-based teaching tool. Designed and developed during the course of my internship at ESTL.
+          </p>
+        </div>
+        <div class="project-orange">
+          <h2>Dash</h2>
+          <h4>UI Design / Web Development</h4>
+          <p>
+            Dash is an automated RFID system for tracking and recording runs. Users interact and use the system via its web interface. I was a part of the design and development team during my internship at ESTL.
+          </p>
+        </div>
+        <div class="project-green">
+          <h2>Centinel</h2>
+          <h4>UI Design / Web Development</h4>
+          <p>
+            Centinel is a personal finance management web app with a twist. It has a bot which makes humorous sarcastic remarks about the user’s ability to manage finances. Developed during a 24-hour hackathon.
+          </p>
+        </div>
+        <div class="project-darkblue">
+          <h2>Overwot</h2>
+          <h4>Text-based UI Design / Bot Development</h4>
+          <p>
+            Overwot is a telegram bot for retrieving players’ stats for the game Overwatch. A personal project of mine which I really enjoy working on. Also, designing a text-based UI was not as easy as I thought.
           </p>
         </div>
       </div>
     </div>
     <script src="js/smooth-scroll.min.js"></script>
     <script>
-      smoothScroll.init();
+      smoothScroll.init({
+        easing: 'easeOutQuad',
+        offset: 90,
+      });
     </script>
   </body>
 </html>
