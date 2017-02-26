@@ -1,7 +1,7 @@
 // scss-lint:disable VendorPrefix
 $white: #fff;
 $primary-color: #111;
-$secondary-color: #717171;
+$secondary-color: #949a9c;
 $gradient-blue: #daf5ff;
 $gradient-pink: #fff5eb;
 $project-blue: #66a7d5;
@@ -30,33 +30,6 @@ $serif-font: 'Source Serif Pro';
   transform: translateY(-50%);
 }
 
-%project {
-  color: $white;
-  font-size: 20px;
-  // height: 80%;
-  padding: 80px 0;
-  text-align: center;
-  width: 100%;
-
-  h2 {
-    font-size: 2.4em;
-  }
-
-  h4 {
-    font-family: $sans-font;
-    font-weight: 300;
-  }
-
-  p {
-    font-weight: 300;
-    letter-spacing: .5px;
-    line-height: 1.6em;
-    margin: 0 auto;
-    max-width: 90%;
-    width: 600px;
-  }
-}
-
 *,
 *:after,
 *:before {
@@ -69,6 +42,10 @@ $serif-font: 'Source Serif Pro';
   padding: 0;
 }
 
+body {
+  font-size: 16px;
+}
+
 h1,
 h2,
 h3,
@@ -78,17 +55,14 @@ h6 {
   font-family: $serif-font;
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
-
 .content {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 .header {
   background: $white;
+  box-shadow: 0 1px 1px rgba(15, 20, 20, .1);
   height: 85px;
   position: fixed;
   width: 100%;
@@ -104,32 +78,29 @@ body::-webkit-scrollbar {
   h3 {
     color: $primary-color;
     display: inline-block;
-    font-size: 36px;
+    font-size: 2em;
     font-weight: 700;
-    margin: 20px 0;
+    line-height: 85px;
   }
 
   ul {
     display: inline-block;
     float: right;
+    line-height: 85px;
   }
 
   li {
     display: inline-block;
-    font-size: 18px;
+    font-size: 1em;
     letter-spacing: 1.5px;
     list-style-type: none;
-    margin: 31px 0 31px 30px;
+    margin-left: 30px;
   }
 
   a {
     color: $secondary-color;
     text-decoration: none;
   }
-}
-
-.spacer {
-  height: 85px;
 }
 
 .body-container {
@@ -139,8 +110,8 @@ body::-webkit-scrollbar {
 
 .intro {
   background-image: linear-gradient(270deg, $gradient-blue 15%, $gradient-pink 100%);
-  font-size: 24px;
-  height: calc(100% - 275px);
+  height: 99%;
+  padding-top: 85px;
   position: relative;
   width: 100%;
 
@@ -153,14 +124,14 @@ body::-webkit-scrollbar {
 
   h1 {
     color: $primary-color;
-    font-size: 3em;
+    font-size: 4em;
     letter-spacing: 1px;
     text-align: right;
   }
 
   p {
     color: $secondary-color;
-    font-size: 1em;
+    font-size: 1.3em;
     letter-spacing: .3px;
     text-align: right;
   }
@@ -168,8 +139,7 @@ body::-webkit-scrollbar {
 
 .works {
   background: $white;
-  font-size: 20px;
-  height: 180px;
+  height: 25%;
   position: relative;
   text-align: center;
   width: 100%;
@@ -181,14 +151,58 @@ body::-webkit-scrollbar {
 
   h3 {
     color: $primary-color;
-    font-size: 1.8em;
+    font-size: 2.3em;
   }
 
   p {
     color: $secondary-color;
-    font-size: 1em;
-    line-height: 1.5em;
+    font-size: 1.2em;
     margin-top: 5px;
+  }
+}
+
+%project {
+  color: $white;
+  text-align: center;
+  width: 100%;
+
+  h2 {
+    font-size: 2.5em;
+  }
+
+  h4 {
+    font-family: $sans-font;
+    font-size: 1.2em;
+    font-weight: 300;
+    opacity: .6;
+    padding-bottom: 30px;
+  }
+
+  p {
+    font-size: 1.1em;
+    font-weight: 300;
+    letter-spacing: .5px;
+    line-height: 1.6em;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 700px;
+  }
+
+  a {
+    @include transition(all .2s ease-out);
+    background: $white;
+    border-radius: 3px;
+    display: inline-block;
+    font-family: $sans-font;
+    font-size: 1.3em;
+    font-weight: 300;
+    margin-top: 40px;
+    padding: .6em 2em;
+    text-decoration: none;
+
+    &:hover {
+      background: rgba(255, 255, 255, .8);
+    }
   }
 }
 
@@ -205,6 +219,10 @@ body::-webkit-scrollbar {
 .project-green {
   @extend %project;
   background: $project-green;
+
+  a {
+    color: $project-green;
+  }
 }
 
 .project-darkblue {
@@ -212,12 +230,28 @@ body::-webkit-scrollbar {
   background: $project-darkblue;
 }
 
-.project-img {
-  -webkit-box-shadow: 0 4px 10px 3px rgba(56, 56, 56, 0.25);
-  -moz-box-shadow: 0 4px 10px 3px rgba(56, 56, 56, 0.25);
-  box-shadow: 0 4px 10px 3px rgba(56, 56, 56 ,0.25);
+.project-content {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 5% 0;
+  width: 90%;
+}
+
+%project-img {
+  -webkit-box-shadow: 0 4px 10px 3px rgba(15, 20, 20, .1);
+  -moz-box-shadow: 0 4px 10px 3px rgba(15, 20, 20, .1);
+  box-shadow: 0 4px 10px 3px rgba(15, 20, 20, .1);
   border-radius: 5px;
   margin-bottom: 40px;
-  max-width: 80%;
-  width: 800px;
+  max-width: 90%;
+}
+
+.project-img-landscape {
+  @extend %project-img;
+  width: 600px;
+}
+
+.project-img-portrait {
+  @extend %project-img;
+  width: 500px;
 }
