@@ -4,10 +4,10 @@ $primary-color: #111;
 $secondary-color: #949a9c;
 $gradient-blue: #daf5ff;
 $gradient-pink: #fff5eb;
-$project-blue: #66a7d5;
-$project-orange: #eaa187;
-$project-green: #7dcc93;
-$project-darkblue: #21364b;
+$project-blue: #80C2D3;
+$project-orange: #EA9F74;
+$project-green: #A3CA6C;
+$project-darkblue: #7F91A9;
 
 $sans-font: 'Source Sans Pro';
 $serif-font: 'Source Serif Pro';
@@ -187,40 +187,48 @@ h6 {
     max-width: 100%;
     width: 700px;
   }
+}
 
-  a {
-    @include transition(all .2s ease-out);
-    background: $white;
-    border-radius: 3px;
-    display: inline-block;
-    font-family: $sans-font;
-    font-size: 1.3em;
-    font-weight: 300;
-    margin-top: 40px;
-    padding: .6em 2em;
-    text-decoration: none;
+.button {
+  @include transition(all .2s ease-out);
+  background: $white;
+  border-radius: 3px;
+  display: inline-block;
+  font-family: $sans-font;
+  font-size: 1.3em;
+  font-weight: 300;
+  margin-top: 40px;
+  padding: .6em 2em;
+  text-decoration: none;
 
-    &:hover {
-      background: rgba(255, 255, 255, .8);
-    }
+  &:hover {
+    background: rgba(255, 255, 255, .8);
   }
 }
 
 .project-blue {
   @extend %project;
   background: $project-blue;
+
+  .button {
+    color: $project-blue;
+  }
 }
 
 .project-orange {
   @extend %project;
   background: $project-orange;
+
+  .button {
+    color: $project-orange;
+  }
 }
 
 .project-green {
   @extend %project;
   background: $project-green;
 
-  a {
+  .button {
     color: $project-green;
   }
 }
@@ -228,6 +236,10 @@ h6 {
 .project-darkblue {
   @extend %project;
   background: $project-darkblue;
+
+  .button {
+    color: $project-darkblue;
+  }
 }
 
 .project-content {
