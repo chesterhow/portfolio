@@ -1,6 +1,4 @@
 # portfolio
-:construction: Work in progress! :construction:
-
 My personal portfolio website. Check it out at [chester.how](http://chester.how)
 
 ## License
