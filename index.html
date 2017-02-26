@@ -11,27 +11,24 @@
     <div class="content">
       <div class="header">
         <div class="header-container">
-          <h3>ches.</h3>
+          <h3><a data-scroll href="#intro">ches.</a></h3>
           <ul>
-            <li><a data-scroll href="#works">WORKS</a></li>
-            <li><a data-scroll href="#">ABOUT</a></li>
-            <li><a data-scroll href="#">CONTACT</a></li>
+            <li><a data-scroll href="#works" class="header-link">WORKS</a></li>
+            <li><a data-scroll href="#about" class="header-link">ABOUT</a></li>
           </ul>
         </div>
       </div>
       <div class="body-container">
-        <div class="intro">
+        <div id="intro" class="intro">
           <div class="intro-text">
             <h1>Not mediocre.</h1>
             <p>Developer &#38; designer, fueled by coffee.</p>
           </div>
         </div>
 
-        <div id="works" class="works">
-          <div class="works-text">
-            <h3>Works.</h3>
-            <p>Here’s what I’ve been up to</p>
-          </div>
+        <div id="works" class="segment">
+          <h3>Works.</h3>
+          <p>Here’s what I’ve been up to</p>
         </div>
 
         <div class="project-blue">
@@ -64,7 +61,7 @@
             <p>
               Centinel is a personal finance management web app with a twist. It contains a bot whose sole purpose is making humorous sarcastic remarks about the user’s financial management ability. Developed during a 24-hour hackathon.
             </p>
-            <a href="https://github.com/CIA-hideout/centinel" target="_blank" class="button">View on GitHub</a>
+            <a href="https://github.com/CIA-hideout/centinel" target="_blank" class="link-button">View on GitHub</a>
           </div>
         </div>
 
@@ -76,7 +73,7 @@
             <p>
               Leaderboard is a web app to manage and display time-based rankings. It was built for an open house project, as they required a website to showcase the highscores of participants.
             </p>
-            <a href="https://github.com/chesterhow/leaderboard" target="_blank" class="button">View on GitHub</a>
+            <a href="https://github.com/chesterhow/leaderboard" target="_blank" class="link-button">View on GitHub</a>
           </div>
         </div>
 
@@ -88,7 +85,7 @@
             <p>
               Overwot is a telegram bot for retrieving players’ stats for the game Overwatch. A personal project of mine which I really enjoyed working on. Also, designing a text-based UI was not as easy as I thought.
             </p>
-            <a href="https://github.com/chesterhow/overwatch-telegram-bot" target="_blank" class="button">View on GitHub</a>
+            <a href="https://github.com/chesterhow/overwatch-telegram-bot" target="_blank" class="link-button">View on GitHub</a>
           </div>
         </div>
 
@@ -100,7 +97,7 @@
             <p>
               Pongstar is a game developed by my team and I during our final semester in polytechnic. It's a remake of the classic Atari game, Pong. Picture Pong with pick-ups and obstacles. Yup, that's Pongstar.
             </p>
-            <a href="https://github.com/CIA-hideout/pongstar" target="_blank" class="button">View on GitHub</a>
+            <a href="https://github.com/CIA-hideout/pongstar" target="_blank" class="link-button">View on GitHub</a>
           </div>
         </div>
 
@@ -110,12 +107,32 @@
             <h2>Three Chances</h2>
             <h4>Game Design / Game Development</h4>
             <p>
-              Three Chances is the first game my team and I developed during our final semester in polytechic. It's a turn-based strategy game. Inspired by HappyMagenta's Into the Dim.
+              Three Chances is the very first game my team and I developed during our final semester in polytechic. It's a turn-based strategy game. Inspired by HappyMagenta's Into the Dim.
             </p>
-            <a href="https://github.com/CIA-hideout/three-chances" target="_blank" class="button">View on GitHub</a>
+            <a href="https://github.com/CIA-hideout/three-chances" target="_blank" class="link-button">View on GitHub</a>
           </div>
         </div>
 
+        <div id="about" class="segment">
+            <h3>About.</h3>
+            <img src="images/me.jpg" alt="me" class="headshot">
+            <p>I’m Chester, a web developer &amp; designer based in Singapore. Cats, coffee and good music make my day. Say hello maybe?</p>
+            <a href="mailto:chesterhow@gmail.com" class="contact-button">Contact me</a>
+        </div>
+
+        <div class="footer">
+          <a href="https://github.com/chesterhow" target="_blank" class="icon-button">
+            <img src="images/github.svg" alt="github">
+          </a>
+
+          <a href="https://www.facebook.com/itsnotchester" target="_blank" class="icon-button">
+            <img src="images/facebook.svg" alt="facebook">
+          </a>
+
+          <a href="http://instagram.com/itsnotchester" target="_blank" class="icon-button">
+            <img src="images/instagram.svg" alt="instagram">
+          </a>
+        </div>
       </div>
     </div>
     <script src="js/smooth-scroll.min.js"></script>

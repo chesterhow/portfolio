@@ -1,5 +1,6 @@
 // scss-lint:disable VendorPrefix
 $white: #fff;
+$grey: #eee;
 $primary-color: #111;
 $secondary-color: #949a9c;
 $gradient-blue: #daf5ff;
@@ -60,6 +61,7 @@ h6 {
   width: 100%;
 }
 
+// Header
 .header {
   background: $white;
   box-shadow: 0 1px 1px rgba(15, 20, 20, .1);
@@ -76,11 +78,15 @@ h6 {
   width: 80%;
 
   h3 {
-    color: $primary-color;
     display: inline-block;
-    font-size: 2em;
-    font-weight: 700;
     line-height: 85px;
+
+    a {
+      color: $primary-color;
+      font-family: $serif-font;
+      font-size: 2em;
+      font-weight: 700;
+    }
   }
 
   ul {
@@ -97,12 +103,16 @@ h6 {
     margin-left: 30px;
   }
 
-  a {
+  .header-link {
     color: $secondary-color;
+  }
+
+  a {
     text-decoration: none;
   }
 }
 
+// Content
 .body-container {
   height: 100%;
   width: 100%;
@@ -137,17 +147,12 @@ h6 {
   }
 }
 
-.works {
+.segment {
   background: $white;
-  height: 25%;
+  padding: 5% 0;
   position: relative;
   text-align: center;
   width: 100%;
-
-  .works-text {
-    @extend %center-vertical;
-    width: 100%;
-  }
 
   h3 {
     color: $primary-color;
@@ -157,10 +162,21 @@ h6 {
   p {
     color: $secondary-color;
     font-size: 1.2em;
-    margin-top: 5px;
+    line-height: 1.7em;
+    margin: 5px auto 0;
+    max-width: 90%;
+    width: 550px;
   }
 }
 
+// Footer
+.footer {
+  background: $grey;
+  height: 85px;
+  text-align: center;
+}
+
+// Project
 %project {
   color: $white;
   text-align: center;
@@ -189,28 +205,11 @@ h6 {
   }
 }
 
-.button {
-  @include transition(all .2s ease-out);
-  background: $white;
-  border-radius: 3px;
-  display: inline-block;
-  font-family: $sans-font;
-  font-size: 1.3em;
-  font-weight: 300;
-  margin-top: 40px;
-  padding: .6em 2em;
-  text-decoration: none;
-
-  &:hover {
-    background: rgba(255, 255, 255, .8);
-  }
-}
-
 .project-blue {
   @extend %project;
   background: $project-blue;
 
-  .button {
+  .link-button {
     color: $project-blue;
   }
 }
@@ -219,7 +218,7 @@ h6 {
   @extend %project;
   background: $project-orange;
 
-  .button {
+  .link-button {
     color: $project-orange;
   }
 }
@@ -228,7 +227,7 @@ h6 {
   @extend %project;
   background: $project-green;
 
-  .button {
+  .link-button {
     color: $project-green;
   }
 }
@@ -237,7 +236,7 @@ h6 {
   @extend %project;
   background: $project-darkblue;
 
-  .button {
+  .link-button {
     color: $project-darkblue;
   }
 }
@@ -249,6 +248,7 @@ h6 {
   width: 90%;
 }
 
+// Images
 %project-img {
   -webkit-box-shadow: 0 4px 10px 3px rgba(15, 20, 20, .1);
   -moz-box-shadow: 0 4px 10px 3px rgba(15, 20, 20, .1);
@@ -266,4 +266,56 @@ h6 {
 .project-img-portrait {
   @extend %project-img;
   width: 500px;
+}
+
+.headshot {
+  border-radius: 250px;
+  margin: 20px 0;
+  max-width: 50%;
+  width: 250px;
+}
+
+// Buttons
+%button {
+  @include transition(all .2s ease-out);
+  display: inline-block;
+  font-family: $sans-font;
+  font-size: 1.3em;
+  margin-top: 40px;
+  padding: .6em 2em;
+  text-decoration: none;
+}
+
+.link-button {
+  @extend %button;
+  background: $white;
+  border-radius: 3px;
+  font-weight: 300;
+
+  &:hover {
+    background: rgba(255, 255, 255, .8);
+  }
+}
+
+.contact-button {
+  @extend %button;
+  border: 2px solid $secondary-color;
+  color: $secondary-color;
+  font-weight: 400;
+
+  &:hover {
+    background: $secondary-color;
+    color: $white;
+  }
+}
+
+.icon-button {
+  display: inline-block;
+  line-height: 85px;
+  margin: 0 30px;
+
+  img {
+    height: 30px;
+    vertical-align: middle;
+  }
 }
