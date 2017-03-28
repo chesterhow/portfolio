@@ -297,15 +297,22 @@ h6 {
   }
 }
 
-.contact-button {
+.about-button {
   @extend %button;
   border: 2px solid $secondary-color;
   color: $secondary-color;
   font-weight: 400;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 200px;
 
   &:hover {
     background: $secondary-color;
     color: $white;
+  }
+
+  &:last-child {
+    margin-top: 10px;
   }
 }
 
