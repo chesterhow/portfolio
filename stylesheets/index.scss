@@ -69,6 +69,10 @@ h6 {
   position: fixed;
   width: 100%;
   z-index: 1;
+
+  @media (max-width: 600px) {
+    height: auto;
+  }
 }
 
 .header-container {
@@ -77,15 +81,22 @@ h6 {
   max-width: 1200px;
   width: 80%;
 
-  h3 {
+  @media (max-width: 600px) {
+    text-align: center;
+    width: 100%;
+  }
+
+  .header-title {
+    color: $primary-color;
     display: inline-block;
+    font-family: $serif-font;
+    font-size: 2em;
+    font-weight: 700;
     line-height: 85px;
 
-    a {
-      color: $primary-color;
-      font-family: $serif-font;
-      font-size: 2em;
-      font-weight: 700;
+    @media (max-width: 600px) {
+      font-size: 1.8em;
+      line-height: 65px;
     }
   }
 
@@ -93,6 +104,14 @@ h6 {
     display: inline-block;
     float: right;
     line-height: 85px;
+
+    @media (max-width: 600px) {
+      border-top: .5px solid $grey;
+      float: none;
+      line-height: normal;
+      padding: 5px 0;
+      width: 100%;
+    }
   }
 
   li {
@@ -101,6 +120,13 @@ h6 {
     letter-spacing: 1.5px;
     list-style-type: none;
     margin-left: 30px;
+
+    @media (max-width: 600px) {
+      float: none;
+      font-size: .9em;
+      line-height: 30px;
+      margin: 0 15px;
+    }
   }
 
   .header-link {
@@ -130,6 +156,16 @@ h6 {
     margin: 0 auto;
     max-width: 1200px;
     width: 80%;
+
+    @media (max-width: 600px) {
+      padding: 0 20px;
+      width: 100%;
+
+      h1,
+      p {
+        text-align: center;
+      }
+    }
   }
 
   h1 {
@@ -137,6 +173,11 @@ h6 {
     font-size: 4em;
     letter-spacing: 1px;
     text-align: right;
+
+    @media (max-width: 600px) {
+      font-size: 2.5em;
+      margin-bottom: 5px;
+    }
   }
 
   p {
@@ -144,6 +185,10 @@ h6 {
     font-size: 1.3em;
     letter-spacing: .3px;
     text-align: right;
+
+    @media (max-width: 600px) {
+      font-size: 1.1em;
+    }
   }
 }
 
