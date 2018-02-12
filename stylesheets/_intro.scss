@@ -1,9 +1,27 @@
 .intro {
   background: $spring-base;
-  color: $spring-primary;
+  color: $spring-secondary;
   height: calc(100% - 50px);
 
-  &--heading {
+  &--content {
+    @extend %center-vertical;
+    @extend %content-width;
+  }
+
+  &--dash {
+    color: $spring-primary;
     margin: 0;
+    border-width: 5px;
+    border-style: solid;
+    width: 15%;
+  }
+
+  &--heading {
+    color: $spring-primary;
+    margin: 2.5rem 0;
+  }
+
+  &--subheading {
+    margin: 3rem 0 0;
   }
 }

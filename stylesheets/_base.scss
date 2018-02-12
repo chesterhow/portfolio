@@ -2,14 +2,25 @@
   @include box-sizing;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
+html {
   font-family: 'Cerebri Sans';
   font-size: 20px;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
 h1 {
   font-size: 4.236em;
+}
+
+h2 {
+  font-size: 2.618em;
+}
+
+h3 {
+  font-size: 1.618em;
 }
