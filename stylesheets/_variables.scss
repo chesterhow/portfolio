@@ -1,0 +1,12 @@
+// COLORS
+
+// Spring
+$spring-base: #AACE69;
+$spring-primary: #F7F2DC;
+$spring-secondary: #51673B;
+
+@mixin box-sizing($type: border-box) {
+  -webkit-box-sizing: $type;
+     -moz-box-sizing: $type;
+          box-sizing: $type;
+}

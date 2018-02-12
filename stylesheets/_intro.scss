@@ -1,0 +1,9 @@
+.intro {
+  background: $spring-base;
+  color: $spring-primary;
+  height: calc(100% - 50px);
+
+  &--heading {
+    margin: 0;
+  }
+}
