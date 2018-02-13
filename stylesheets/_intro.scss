@@ -1,10 +1,12 @@
 .intro {
   background: $spring-base;
   color: $spring-secondary;
-  height: calc(100% - 50px);
+  display: grid;
+  grid-template-rows: minmax(2rem, 1fr) auto minmax(2rem, 1fr);
+  min-height: calc(100% - 50px);
 
   &--content {
-    @extend %center-vertical;
+    grid-row: 2/3;
     @extend %content-width;
   }
 
@@ -13,15 +15,16 @@
     margin: 0;
     border-width: 5px;
     border-style: solid;
-    width: 15%;
+    width: 10%;
+    min-width: 50px;
   }
 
   &--heading {
     color: $spring-primary;
-    margin: 2.5rem 0;
+    margin: .7em 0;
   }
 
   &--subheading {
-    margin: 3rem 0 0;
+    margin: 1em 0 0;
   }
 }

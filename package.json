@@ -10,6 +10,9 @@
     "build": "parcel build index.js"
   },
   "devDependencies": {
-    "node-sass": "^4.7.2"
+    "node-sass": "^4.7.2",
+    "stylelint": "^8.4.0",
+    "stylelint-config-recommended-scss": "^3.0.0",
+    "stylelint-scss": "^2.3.0"
   }
 }
