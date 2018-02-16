@@ -3,8 +3,10 @@
 }
 
 html {
-  font-family: 'Cerebri Sans';
+  font-family: 'Cerebri Sans', sans-serif;
   font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {

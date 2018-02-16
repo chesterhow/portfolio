@@ -1,0 +1,51 @@
+.projects {
+  background: $summer-base;
+  color: $summer-secondary;
+  position: relative;
+  height: 100%;
+
+  &--border {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    border: solid rgba(255,255,255,0.5) 20px;
+  }
+
+  &--heading {
+    display: inline-block;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    margin: 0;
+    border-top: solid 20px;
+  }
+
+  &--project {
+    @extend %content-width;
+    height: 100%;
+    display: grid;
+    grid-template:
+      "top top" minmax(2rem, 1fr)
+      "details image" auto
+      "bottom bottom" minmax(2rem, 1fr);
+  }
+
+  &--details {
+    grid-area: details;
+    margin-right: 50px;
+  }
+
+  &--title {
+    color: $summer-primary;
+    margin: 0;
+  }
+
+  &--category {
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+
+  img {
+    grid-area: image;
+  }
+}
