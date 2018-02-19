@@ -6,7 +6,7 @@
     <title>Chester How</title>
   </head>
   <body>
-    <div class="intro">
+    <div class="intro" id="intro">
       <div class="intro--content">
         <hr class="intro--dash">
         <h1 class="intro--heading">Hello<br>I'm a web devloper & designer based in Singapore.</h1>
@@ -15,11 +15,12 @@
       </div>
     </div>
 
-    <div class="projects">
-      <div class="projects--border"></div>
-      <h2 class="projects--heading">Projects</h2>
+    <div class="projects" id="projects">
+      <div class="projects--heading">
+        <h2>Projects</h2>
+      </div>
 
-      <div class="projects--project">
+      <div class="projects--project projects--odd">
         <div class="projects--details">
           <h1 class="projects--title">Tale</h1>
           <p class="projects--category">UI DESIGN / WEB DEVELOPMENT</p>
@@ -27,7 +28,26 @@
         </div>
         <img src="http://via.placeholder.com/350x300" alt="">
       </div>
+
+      <div class="projects--project projects--even">
+        <div class="projects--details">
+          <h1 class="projects--title">Heritage</h1>
+          <p class="projects--category">WRITING / EXPLORING</p>
+          <p class="projects--description">A blog curated to document my team's journey into discovering Singapore's heritage. Through our insights, we hope to help people better understand our heritage. Made with Jekyll using the Tale theme.</p>
+        </div>
+        <img src="http://via.placeholder.com/350x300" alt="">
+      </div>
+
+      <div class="projects--project projects--odd">
+        <div class="projects--details">
+          <h1 class="projects--title">chorus</h1>
+          <p class="projects--category">UI DESIGN / WEB DEVELOPMENT</p>
+          <p class="projects--description">A web app for listening to music with friends in real-time. It works like an online radio channel where everyone hears the same song at the same time. Conceptualised, designed and built during a 48 hour hackathon.</p>
+        </div>
+        <img src="http://via.placeholder.com/350x300" alt="">
+      </div>
     </div>
+
     <script src="index.js"></script>
   </body>
 </html>
