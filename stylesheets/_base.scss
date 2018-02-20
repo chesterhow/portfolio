@@ -1,5 +1,5 @@
 * {
-  @include box-sizing;
+  @extend %box-sizing;
 }
 
 html {
@@ -10,9 +10,9 @@ html {
 }
 
 body {
+  height: 100vh;
   margin: 0;
   padding: 0;
-  height: 100vh;
 }
 
 h1 {

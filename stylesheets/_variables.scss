@@ -23,23 +23,15 @@ $winter-primary: #2F70A9;
 $winter-secondary: #91D1F2;
 
 /**
- * MIXINS
+ * EXTENDS
  */
 
-@mixin box-sizing($type: border-box) {
-  -webkit-box-sizing: $type;
-     -moz-box-sizing: $type;
-          box-sizing: $type;
+%box-sizing {
+  box-sizing: border-box;
 }
 
 %content-width {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
-}
-
-%center-vertical {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }

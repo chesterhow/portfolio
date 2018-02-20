@@ -1,9 +1,9 @@
 .intro {
-  background: $spring-base;
-  color: $spring-secondary;
   display: grid;
   grid-template-rows: minmax(2rem, 1fr) auto minmax(2rem, 1fr);
   min-height: calc(100% - 50px);
+  background: $spring-base;
+  color: $spring-secondary;
 
   &--content {
     grid-row: 2/3;
@@ -11,17 +11,17 @@
   }
 
   &--dash {
-    color: $spring-primary;
+    width: 10%;
+    min-width: 50px;
     margin: 0;
     border-width: 5px;
     border-style: solid;
-    width: 10%;
-    min-width: 50px;
+    color: $spring-primary;
   }
 
   &--heading {
-    color: $spring-primary;
     margin: .7em 0;
+    color: $spring-primary;
   }
 
   &--subheading {

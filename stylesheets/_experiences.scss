@@ -1,0 +1,75 @@
+.experiences {
+  padding-bottom: 5rem;
+  background: $autumn-base;
+  color: $autumn-secondary;
+
+  &--heading {
+    padding: 50px 0 0 50px;
+
+    h2 {
+      display: inline-block;
+      margin: 0;
+      border-top: solid 20px;
+    }
+  }
+
+  &--experience {
+    @extend %content-width;
+    display: grid;
+    grid-column-gap: 80px;
+    grid-template:
+      "logo details"
+      / 150px auto;
+    max-width: 830px;
+    padding-top: 5rem;
+  }
+
+  &--logo {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(236, 129, 50, 0.1);
+
+    .estl {
+      width: 100px;
+    }
+
+    .contentco {
+      width: 80px;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &--name {
+    margin: 0;
+    color: $autumn-primary;
+  }
+
+  &--dash {
+    width: 60px;
+    margin: 0.5rem 0 1.5rem;
+    border: 0;
+    border-top: solid 5px $autumn-primary;
+  }
+
+  &--scope {
+    padding: 1rem;
+    background: rgba(236, 129, 50, 0.1);
+
+    h3 {
+      margin: 0 0 0.5rem;
+    }
+
+    ul {
+      margin: 0;
+      line-height: 1.3;
+    }
+  }
+}

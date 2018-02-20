@@ -1,9 +1,7 @@
-
 .projects {
+  padding-bottom: 5rem;
   background: $summer-base;
   color: $summer-secondary;
-  padding-bottom: 5rem;
-
 
   &--heading {
     padding: 50px 50px 0;
@@ -44,19 +42,19 @@
 
   &--project {
     @extend %content-width;
-    padding-top: 5rem;
     display: grid;
     grid-column-gap: 2rem;
     align-items: center;
+    padding-top: 5rem;
 
     @media (max-width: 768px) {
-      padding-top: 3rem;
       grid-template:
         "top" 1fr
         "image" auto
         "details" auto
         "bottom" 1fr;
       justify-items: center;
+      padding-top: 3rem;
       text-align: center;
     }
   }
@@ -66,8 +64,8 @@
   }
 
   &--title {
-    color: $summer-primary;
     margin: 0;
+    color: $summer-primary;
 
     @media (max-width: 768px) {
       margin: 1rem 0 0.5rem;
@@ -75,10 +73,10 @@
   }
 
   &--category {
+    margin: 0 0 1rem;
     font-size: 0.9rem;
     font-weight: bold;
     letter-spacing: 0.1rem;
-    margin: 0 0 1rem;
   }
 
   &--description {

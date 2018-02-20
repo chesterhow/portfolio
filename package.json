@@ -10,9 +10,11 @@
     "build": "parcel build index.html --public-url ./"
   },
   "devDependencies": {
+    "autoprefixer": "^8.0.0",
     "node-sass": "^4.7.2",
     "parcel-bundler": "^1.6.1",
     "stylelint": "^8.4.0",
+    "stylelint-config-property-sort-order-smacss": "^3.0.1",
     "stylelint-config-recommended-scss": "^3.0.0",
     "stylelint-scss": "^2.3.0"
   }
