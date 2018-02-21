@@ -1,0 +1,81 @@
+@font-face {
+	font-family: 'Cerebri Sans';
+	font-style: normal;
+	font-weight: bold;
+	src: url('../assets/fonts/cerebri-sans-bold.eot');
+	src: url('../assets/fonts/cerebri-sans-bold.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/cerebri-sans-bold.woff2') format('woff2'),
+	     url('../assets/fonts/cerebri-sans-bold.woff') format('woff'),
+	     url('../assets/fonts/cerebri-sans-bold.ttf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Cerebri Sans', sans-serif;
+  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.error-404 {
+  height: 100%;
+  background: #96D4D4;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.error-404--content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  margin: 0;
+  color: #FDE33A;
+  font-size: 5em;
+  line-height: 1;
+}
+
+h3 {
+  margin: 1rem 0 2rem;
+  font-size: 1.618em;
+}
+
+@media (max-width: $break-large) {
+  h3 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: $break-medium) {
+  h3 {
+    font-size: 1.333em;
+  }
+}
+
+a {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 5px;
+  background: #FFFFFF;
+  color: #96D4D4;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.7;
+}

@@ -1,0 +1,30 @@
+.intro {
+  display: grid;
+  grid-template-rows: minmax(2rem, 1fr) auto minmax(2rem, 1fr);
+  min-height: calc(100% - 50px);
+  background: $spring-base;
+  color: $spring-secondary;
+
+  &--content {
+    @extend %content-width;
+    grid-row: 2/3;
+  }
+
+  &--dash {
+    width: 10%;
+    min-width: 50px;
+    margin: 0;
+    border-width: 5px;
+    border-style: solid;
+    color: $spring-primary;
+  }
+
+  &--heading {
+    margin: 0.7em 0;
+    color: $spring-primary;
+  }
+
+  &--subheading {
+    margin: 1em 0 0;
+  }
+}

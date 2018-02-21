@@ -1,0 +1,21 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:chesterhow/portfolio.git",
+  "author": "Chester How <chesterhow@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --public-url ./ && parcel build 404.html"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.0.0",
+    "node-sass": "^4.7.2",
+    "parcel-bundler": "^1.6.1",
+    "stylelint": "^8.4.0",
+    "stylelint-config-property-sort-order-smacss": "^3.0.1",
+    "stylelint-config-recommended-scss": "^3.0.0",
+    "stylelint-scss": "^2.3.0"
+  }
+}

@@ -1,0 +1,62 @@
+.contact {
+  background: $winter-base;
+  color: $winter-secondary;
+  text-align: center;
+
+  &--heading {
+    margin-bottom: 2.5rem;
+    padding-top: 50px;
+
+    h2 {
+      display: inline-block;
+      margin: 0;
+      border-top: solid 20px;
+    }
+
+    @media (max-width: $break-medium) {
+      padding-top: 20px;
+
+      h2 {
+        border-top-width: 15px;
+      }
+    }
+  }
+
+  &--content {
+    padding-bottom: 3rem;
+    text-align: center;
+
+    h3 {
+      margin: 0;
+    }
+  }
+
+  &--list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      margin-bottom: 1.5rem;
+    }
+
+    a {
+      border-bottom: 1.5px solid $winter-secondary;
+      color: $winter-primary;
+      text-decoration: none;
+
+      &:hover {
+        color: $winter-secondary;
+      }
+    }
+  }
+}
+
+.footer {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 1rem 1rem 2rem;
+  border-top: 1px solid $footer-line;
+  color: $footer-text;
+  font-size: 0.7em;
+}
