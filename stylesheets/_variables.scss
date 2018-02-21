@@ -1,6 +1,7 @@
 /**
  * SCREEN BREAKS
  */
+
 $break-medium: 768px;
 $break-large: 1024px;
 
@@ -22,6 +23,7 @@ $summer-secondary: #FFFFFF;
 $autumn-base: #FCFAEE;
 $autumn-primary: #EC8132;
 $autumn-secondary: #993F17;
+$autumn-fade: rgba(236, 129, 50, 0.1);
 
 // Winter
 $winter-base: #F8FEFF;
@@ -29,16 +31,12 @@ $winter-primary: #2F70A9;
 $winter-secondary: #91D1F2;
 
 // Footer
-$footer-line: rgba(0, 0, 0, 0.1);
-$footer-text: rgba(0, 0, 0, 0.7);
+$footer-line: rgba(47, 112, 169, 0.1);
+$footer-text: rgba(47, 112, 169, 0.7);
 
 /**
  * EXTENDS
  */
-
-%box-sizing {
-  box-sizing: border-box;
-}
 
 %content-width {
   width: 90%;

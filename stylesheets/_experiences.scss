@@ -4,20 +4,20 @@
 
   &--heading {
     margin-bottom: 5rem;
-    padding: 50px 0 0 50px;
+    padding: 2.5rem 0 0 2.5rem;
 
     h2 {
       display: inline-block;
       margin: 0;
-      border-top: solid 20px;
+      border-top: solid 1rem;
     }
 
     @media (max-width: $break-medium) {
       margin-bottom: 2rem;
-      padding: 20px 0 0 20px;
+      padding: 1rem 0 0 1rem;
 
       h2 {
-        border-top-width: 15px;
+        border-top-width: 0.75rem;
       }
     }
   }
@@ -25,7 +25,7 @@
   &--experience {
     @extend %content-width;
     display: grid;
-    grid-column-gap: 4em;
+    grid-column-gap: 4rem;
     grid-template-columns: [logo details] auto 1fr;
     max-width: 830px;
     padding-bottom: 5rem;
@@ -42,14 +42,14 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: rgba(236, 129, 50, 0.1);
+    background: $autumn-fade;
 
     .estl {
       width: 60%;
     }
 
     .contentco {
-      width: 50%;
+      width: 45%;
     }
 
     img {
@@ -79,7 +79,7 @@
     width: 10%;
     margin: 0.5rem 0 1.5rem;
     border: 0;
-    border-top: 5px solid $autumn-primary;
+    border-top: 0.25rem solid $autumn-primary;
 
     @media (max-width: $break-medium) {
       margin: 0.5rem auto 1rem;
@@ -89,7 +89,7 @@
 
   &--scope {
     padding: 1rem;
-    background: rgba(236, 129, 50, 0.1);
+    background: $autumn-fade;
 
     h3 {
       margin: 0 0 0.5rem;
