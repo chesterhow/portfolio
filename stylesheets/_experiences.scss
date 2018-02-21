@@ -1,9 +1,9 @@
 .experiences {
-  padding-bottom: 5rem;
   background: $autumn-base;
   color: $autumn-secondary;
 
   &--heading {
+    margin-bottom: 5rem;
     padding: 50px 0 0 50px;
 
     h2 {
@@ -11,17 +11,30 @@
       margin: 0;
       border-top: solid 20px;
     }
+
+    @media (max-width: $break-medium) {
+      margin-bottom: 2rem;
+      padding: 20px 0 0 20px;
+
+      h2 {
+        border-top-width: 15px;
+      }
+    }
   }
 
   &--experience {
     @extend %content-width;
     display: grid;
-    grid-column-gap: 80px;
-    grid-template:
-      "logo details"
-      / 150px auto;
+    grid-column-gap: 4em;
+    grid-template-columns: [logo details] auto 1fr;
     max-width: 830px;
-    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    @media (max-width: $break-medium) {
+      display: block;
+      max-width: 450px;
+      padding-bottom: 3rem;
+    }
   }
 
   &--logo {
@@ -32,11 +45,11 @@
     background: rgba(236, 129, 50, 0.1);
 
     .estl {
-      width: 100px;
+      width: 60%;
     }
 
     .contentco {
-      width: 80px;
+      width: 50%;
     }
 
     img {
@@ -45,18 +58,33 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
+
+    @media (max-width: $break-medium) {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 0.25rem;
+    }
   }
 
   &--name {
     margin: 0;
     color: $autumn-primary;
+
+    @media (max-width: $break-medium) {
+      text-align: center;
+    }
   }
 
   &--dash {
-    width: 60px;
+    width: 10%;
     margin: 0.5rem 0 1.5rem;
     border: 0;
     border-top: solid 5px $autumn-primary;
+
+    @media (max-width: $break-medium) {
+      margin: 0.5rem auto 1rem;
+      text-align: center;
+    }
   }
 
   &--scope {

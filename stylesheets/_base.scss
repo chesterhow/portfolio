@@ -27,7 +27,7 @@ h3 {
   font-size: 1.618em;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: $break-large) {
   h1 {
     font-size: 3.375em;
   }
@@ -41,7 +41,7 @@ h3 {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $break-medium) {
   h1 {
     font-size: 2.369em;
   }

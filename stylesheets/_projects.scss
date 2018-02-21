@@ -1,9 +1,9 @@
 .projects {
-  padding-bottom: 5rem;
   background: $summer-base;
   color: $summer-secondary;
 
   &--heading {
+    margin-bottom: 5rem;
     padding: 50px 50px 0;
     text-align: right;
 
@@ -13,7 +13,8 @@
       border-top: solid 20px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: $break-medium) {
+      margin-bottom: 2rem;
       padding: 20px 20px 0;
 
       h2 {
@@ -45,16 +46,11 @@
     display: grid;
     grid-column-gap: 2rem;
     align-items: center;
-    padding-top: 5rem;
+    padding-bottom: 5rem;
 
-    @media (max-width: 768px) {
-      grid-template:
-        "top" 1fr
-        "image" auto
-        "details" auto
-        "bottom" 1fr;
-      justify-items: center;
-      padding-top: 3rem;
+    @media (max-width: $break-medium) {
+      display: block;
+      padding-bottom: 3rem;
       text-align: center;
     }
   }
@@ -67,8 +63,8 @@
     margin: 0;
     color: $summer-primary;
 
-    @media (max-width: 768px) {
-      margin: 1rem 0 0.5rem;
+    @media (max-width: $break-medium) {
+      margin: 0.5rem 0 0.25rem;
     }
   }
 
@@ -85,7 +81,8 @@
 
   img {
     grid-area: image;
-    max-width: 100%;
+    width: 100%;
+    max-width: 450px;
     border: 7px solid $summer-secondary;
   }
 }

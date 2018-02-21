@@ -6,8 +6,8 @@
   color: $spring-secondary;
 
   &--content {
-    grid-row: 2/3;
     @extend %content-width;
+    grid-row: 2/3;
   }
 
   &--dash {
