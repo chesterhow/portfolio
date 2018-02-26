@@ -79,6 +79,18 @@
     margin: 0;
   }
 
+  &--link {
+    display: inline-block;
+    margin-top: 1rem;
+    border-bottom: 1.5px solid $summer-primary;
+    color: $summer-secondary;
+    text-decoration: none;
+
+    &:hover {
+      color: $summer-primary;
+    }
+  }
+
   img {
     grid-area: image;
     width: 100%;
