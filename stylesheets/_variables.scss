@@ -43,3 +43,8 @@ $footer-text: rgba(47, 112, 169, 0.7);
   max-width: 1000px;
   margin: 0 auto;
 }
+
+%light-on-dark-text {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

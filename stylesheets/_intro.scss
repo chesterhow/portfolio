@@ -20,7 +20,8 @@
   }
 
   &--heading {
-    margin: 0.7em 0;
+    @extend %light-on-dark-text;
+    margin: 0 0 0.7em;
     color: $spring-primary;
   }
 

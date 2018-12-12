@@ -1,4 +1,5 @@
 .projects {
+  @extend %light-on-dark-text;
   background: $summer-base;
   color: $summer-secondary;
 
