@@ -73,6 +73,7 @@
   &--name {
     margin: 0;
     color: $autumn-primary;
+    letter-spacing: -0.1rem;
 
     @media (max-width: $break-medium) {
       text-align: center;

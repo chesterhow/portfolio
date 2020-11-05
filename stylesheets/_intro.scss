@@ -23,9 +23,11 @@
     @extend %light-on-dark-text;
     margin: 0 0 0.7em;
     color: $spring-primary;
+    letter-spacing: -0.1rem;
   }
 
   &--subheading {
     margin: 1em 0 0;
+    letter-spacing: -0.1rem;
   }
 }
